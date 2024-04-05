@@ -10,12 +10,12 @@ class Solution:
         lower = 1
         upper = n
         cur = n
-        while True:
+        while lower <= upper:
             guessOfN = guess(cur)
             if guessOfN == -1:
-                upper = cur
+                upper = cur - 1
             elif guessOfN == 1:
-                lower = cur
+                lower = cur + 1
             else:
                 return cur
             cur = lower + ((upper - lower) // 2)
