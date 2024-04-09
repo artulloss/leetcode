@@ -6,9 +6,7 @@ class Solution:
             print(l, r, m)
             if nums[m] > nums[l] and nums[m] > nums[r] and r - l == 2:
                 return m
-            elif nums[m] > nums[l]:
-                l += 1
-            elif nums[m] > nums[r]:
+            if nums[m] > nums[r]:
                 r -= 1
             else:
                 l += 1
